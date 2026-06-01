@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "../../../components/layout/header";
-import { Project } from "../../../components/ui/projectCard";
+import Footer from "../../../components/layout/footer";
 import {projects} from "../../../lib/projects"
 import { notFound } from "next/navigation";
 export default async function Home({ params }: {params : Promise<{projectID: string}>}) { 
@@ -11,7 +11,7 @@ export default async function Home({ params }: {params : Promise<{projectID: str
     notFound();
   }
   return (
-    <div className="px-16 bg-gray-900">
+    <div className="px-16 bg-background text-foreground">
       <Header />
       <main className="mx-[20%] mt-10 mb-20 flex flex-col justify-center gap-y-10">
         <h1 className="text-4xl">{project.title}</h1>
@@ -43,14 +43,23 @@ export default async function Home({ params }: {params : Promise<{projectID: str
           <h3 className="text-xl">Liens</h3>
           <div>
             <ul>
-              {project.links.map(link=>(
-                <li className="flex text-lg"><a href={link.link}>{link.name}</a></li>
-              ))}
+              {project.links.map(link =>
+                  link.link.endsWith(".pdf") ? (
+                    <li key={link.name} className="flex text-lg text-secondary">
+                      <a href={link.link} target="_blank">{link.name}</a>
+                    </li>
+                  ) : (
+                    <li key={link.name} className="flex text-lg text-secondary">
+                      <a href={link.link}>{link.name}</a>
+                    </li>
+                  )
+                )}
             </ul>
           </div>
         </div>
         
       </main>
+      <Footer />
     </div>
   );
 }

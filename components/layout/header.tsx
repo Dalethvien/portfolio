@@ -1,24 +1,24 @@
-
+import { FaGithub } from "react-icons/fa";
 
 export default function Header(){
     return(
-        <header id="Home" className="flex flex-row items-center justify-between p-4 sticky top-0 w-full overflow-hidden z-1 scroll-mt-16 bg-gray-900">
+        <header className="flex flex-row items-center justify-between p-4 sticky top-0 w-full overflow-hidden z-1 scroll-mt-16 bg-background text-primary">
             <div>
-                <a href="/">ECHE Tiago</a>
+                <a href="/"><div className="text-foreground text-2xl">
+                    ECHE Tiago
+                    </div>
+                </a>
             </div>
-            <nav className="">
+            <nav >
                 <ul className="flex flex-row gap-4">
                     <li>
-                        <a href="/#Home">Accueil</a>
+                        <a href="/#AboutMe" className="text-primary">A propos</a>
                     </li>
                     <li>
-                        <a href="/#AboutMe">A propos</a>
+                        <a href="/#Projects" className="text-primary">Projets</a>
                     </li>
                     <li>
-                        <a href="/#Projects">Projets</a>
-                    </li>
-                    <li>
-                        <a href="/#Contact">Contact</a>
+                        <a href="/#Contact" className="text-primary">Contact</a>
                     </li>
                 </ul>
             </nav>

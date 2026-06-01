@@ -40,7 +40,7 @@ export const projects: Project[] = [
         personalReview : `Je suis plutôt fier de ce projet : les deux aspects étaient complémentaire avec de la théorie des groupes pour simplifier le problème : 
         Montrer que chaque position de chaque classe suivant un groupe peut arriver dans le sous-groupe en moins de k mouvements suffit. Et résoudre ensuite ce problème via un parcours
         d'arbre amélioré grâce à une heuristique (A*) pour chaque classe.`,
-        links: [{name:"repository", link:"https://github.com/Dalethvien/TIPE-rubik-s-cube-2x2"}],
+        links: [{name:"repository", link:"https://github.com/Dalethvien/TIPE-rubik-s-cube-2x2"}, {name:"presentation", link:"/TIPE.pdf"}],
     },
     {
         projectID: "wikizgliboulou",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
         quelques 120 étudiant de première année d'école d'ingénieur et des bachelors) ! \n
         vous pouvez visiter le site ici si vous le souhaitez`,
         links: [
-            {name: "site", link:"https://wikizgliboulou.alwaysdata.net/"}
+            {name: "site", link:"https://wikizgliboulou.alwaysdata.net/"}, {name:"repository", link:"https://github.com/Dalethvien/wikizgliboulou"}
         ],
     }
 ]

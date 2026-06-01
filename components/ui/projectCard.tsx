@@ -15,15 +15,15 @@ type Project = {
 
 export default function ProjectCard(project : Project){
     return(
-        <div className="bg-gray-800 p-5 h-fit rounded-2xl">
+        <div className="bg-card text-card-foreground p-5 h-fit rounded-md shadow-sm/50 shadow-border border-ring border">
             <div className="relative h-48 w-full">
                 <Image src={project.image} alt={project.title} fill className="object-scale-down"/>
             </div>
-            <h2><Link key={project.projectID} {...project} href={`/projects/${project.projectID}`}>{project.title}</Link></h2>
+            <h2><Link key={project.projectID} href={`/projects/${project.projectID}`} className="internalLinks">{project.title}</Link></h2>
             <p className="text-xs">{project.status}</p>
-            <div className="flex gap-2 text-blue-400 my-4">
+            <div className="flex gap-2 text-accent my-4">
                 {project.languages.map(language =>(
-                    <div>{language}</div>
+                    <div key={language}>{language}</div>
                 ))}
             </div>
         </div>
