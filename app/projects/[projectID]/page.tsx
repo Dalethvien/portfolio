@@ -11,30 +11,30 @@ export default async function Home({ params }: {params : Promise<{projectID: str
     notFound();
   }
   return (
-    <div className="px-16 bg-background text-foreground">
+    <div className="bg-background text-foreground">
       <Header />
-      <main className="mx-[20%] mt-10 mb-20 flex flex-col justify-center gap-y-10">
-        <h1 className="text-4xl">{project.title}</h1>
+      <main className="md:px-16 px-8 md:mx-[20%] mt-10 mb-20 flex flex-col justify-center gap-y-10">
+        <h1 className="md:text-4xl text-3xl">{project.title}</h1>
         <div className="relative w-full max-h-100 aspect-4/3">
           <Image src={project.image} alt={project.title} fill className="object-contain"/>
         </div>
         <div className="flex flex-col gap-y-5">
           <h2 className="text-2xl">Description :</h2>
-          <div className="text-lg/relaxed">
+          <div className="md:text-lg/relaxed text-based/7">
             {project.description}
           </div>
         </div>
         
         <div className="flex flex-col gap-y-5">
           <h2 className="text-2xl">Aspects techniques :</h2>
-          <div className="text-lg/relaxed">
+          <div className="md:text-lg/relaxed text-based/7">
             {project.techChoices}
           </div>
         </div>
         
         <div className="flex flex-col gap-y-5">
           <h2 className="text-2xl">Retour personnel</h2>
-          <div className="text-lg/relaxed">
+          <div className="md:text-lg/relaxed text-based/7">
             {project.personalReview}
           </div>
         </div>
