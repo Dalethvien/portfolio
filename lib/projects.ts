@@ -87,6 +87,6 @@ export const projects: Project[] = [
         lectures d'articles scientifiques, explorations théoriques et pratiques pour mettre en place un/des modèle.s, analyse théorique des solutions mises en places (même si on n'a pas pu
         aller au bout durant mon stage) et rédaction de rapport tout au long de l'avancée. Cela a aussi confirmer mon attrait pour les data sciences, le machine learning etc. Tout ce qui touche 
         de prêt à l'IA, aux maths, et le code.`,
-        links: [{name: "repository", link: "https://gitlab.com/echetiago/internship-online-lasso"}, {name:"rapport de stage", link:"/report.pdf"}]
+        links: [{name: "repository", link: "https://gitlab.com/echetiago/internship-online-lasso"}]
     }
 ]
