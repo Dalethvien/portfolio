@@ -15,7 +15,7 @@ export default async function Home({ params }: {params : Promise<{projectID: str
       <Header />
       <main className="md:px-16 px-8 md:mx-[20%] mt-10 mb-20 flex flex-col justify-center gap-y-10">
         <h1 className="md:text-4xl text-3xl">{project.title}</h1>
-        <div className="relative w-full max-h-100 aspect-4/3">
+        <div className="relative w-full max-h-50 aspect-4/3">
           <Image src={project.image} alt={project.title} fill className="object-contain"/>
         </div>
         <div className="flex flex-col gap-y-5">

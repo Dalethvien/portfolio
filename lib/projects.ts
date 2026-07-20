@@ -66,5 +66,27 @@ export const projects: Project[] = [
         links: [
             {name: "site", link:"https://wikizgliboulou.alwaysdata.net/"}, {name:"repository", link:"https://github.com/Dalethvien/wikizgliboulou"}
         ],
+    },
+    {
+        projectID: "Internship-Online-LASSO",
+        title: "Stage de recherche - Régression LASSO en ligne",
+        status: "terminé",
+        image: "/laboHubertCurien.jpeg",
+        languages: ["python"],
+        description: `J'ai eu l'occasion d'effectuer un stage de rechercher au sein de l'équipe machine learning du laboratoir Hubert Curien de Saint-Etienne pour mon 
+        stage opérationnel, pour terminer ma première année d'école d'ingénieur à Telecom Saint-Etienne. Accompagner par Jordan Patraconne et Ben Gao 
+        j'ai pu m'intéresser à la problématique de la régression LASSO dans un contexte d'apprentissage en ligne. Nous avons explorer 3 idées principales : 
+        L'apprentissage conforme, la théorie des core-sets et l'échantillonage basé sur l'incertitude. Nous avons pu comparer ces méthodes dans différents contexte, 
+        des données à queues faibles jusqu'à des données à queue lourde.`,
+        techChoices:  `Python est un langage de choix lorsqu'on s'intéresse au machine learning et aux data sciences en général, notamment grâce à ses bibliothèques telles que 
+        numpy ou, scipy ou pytorch (non utilisée ici). Le code se présente en deux fichiers principaux : un pour l'algorithme d'apprentissage et ses fonctions 
+        auxilliaires et un deuxième pour la génération des données et leur analyse en utilisant matplotlib pour regarder les caractéristiques qui nous intéresse.`,
+        personalReview: `Ce projet m'a permis de mettre un pied dans le domaine du machine learning et le monde de la recherche académique. J'ai eu la chance d'être encadrer par l'un
+        de me professeur, monsieur Patraconne, qui m'a beaucoup fait progressé. J'ai pu profiter d'une certaine autonomie, tout en étant guidé le long du projet. J'ai pu participer
+        aux discussions sur l'avancée du projet et les directions à prendre et explorer. J'ai été particulièrement content de pouvoir toucher aux différentes parties du processus de recherche : 
+        lectures d'articles scientifiques, explorations théoriques et pratiques pour mettre en place un/des modèle.s, analyse théorique des solutions mises en places (même si on n'a pas pu
+        aller au bout durant mon stage) et rédaction de rapport tout au long de l'avancée. Cela a aussi confirmer mon attrait pour les data sciences, le machine learning etc. Tout ce qui touche 
+        de prêt à l'IA, aux maths, et le code.`,
+        links: [{name: "repository", link: "https://gitlab.com/echetiago/internship-online-lasso"}, {name:"rapport de stage", link:"/report.pdf"}]
     }
 ]
