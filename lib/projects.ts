@@ -88,5 +88,29 @@ export const projects: Project[] = [
         aller au bout durant mon stage) et rédaction de rapport tout au long de l'avancée. Cela a aussi confirmer mon attrait pour les data sciences, le machine learning et de de manière générale 
         tout ce qui touche de prêt à l'IA, aux maths, et à la programmation.`,
         links: [{name: "repository", link: "https://gitlab.com/echetiago/internship-online-lasso"}]
+    },
+    {
+        projectID: "Scrambler-3x3",
+        title: "Scrambler de rubik's cube 3x3",
+        status: "terminé",
+        image: "/",
+        languages: ["C++"],
+        description: `J'ai voulu implémenter un programme pour générer des mélanges de rubik's cube en C++. Pour assurer une distribution uniforme sur l'ensemble des états, l'idée n'est
+        donc pas d'appliquer une suite aléatoire de mouvements mais de choisir un état de manière aléatoire (et uniforme), puis de trouver une solution et de l'inverser pour obtenir un mélange.
+        Pour cela j'ai implémenter un two-phase solver, un algorithme de résolution créé par Kociemba. J'ai donc ré-implémenté IDA* (comme lors de mon TIPE) pour résoudre les deux étapes avec des 
+        tables d'heuristiques basées sur des propriétés du cube (orientation et permutation des pièces). A partir de ce solver je n'avais que d'inversé la solution pour pouvoir obtenir un mélange.
+        Quelques optimisations m'ont permis d'accélérer la partie résolution, qui ne prend qu'une seconde environs.`,
+        techChoices: `J'ai décidé d'utiliser du C++ car je voulais utiliser de la programmation orientée objet et car je voulais un langage performant en terme de rapidité.
+        Le programme utilisant IDA* j'ai utilisé des tables d'heuristiques permettant de réduire le nombre de branches à explorer dans chaque étape. Ces heuristiques concernent
+        des mix d'orientation et de permutations des pièces (coins/arrêtes). Ainsi j'ai également implémenté un système de coordonnées, liant l'état du cube (représenté par l'orientation et la
+        permutation des coins et arrêtes) à des nombres entiers, permettant de rechercher dans les tables.
+        Le projet contient donc plusieurs fichiers : un pour ce qui touche au cube (représentation, méthodes et fonctions spécifiques), un pour les mouvements et un pour la partie solver.
+        J'ai également généré un certains nombre de fichiers texte : Des fichiers qui contiennent des tables d'heuristiques (pour ne pas les re-générer à chaque fois), et des fichiers
+        permettant d'appliquer directement des mouvements sur les coordonnées du cube et non sur le cube en lui même.`,
+        personalReview: `Ce projet était censé être mon "projet de septembre", en parallèle de mes études. Je l'ai finalement commencé fin août et j'ai réussi à avancer relativement vite.
+        Je l'ai ainsi terminé (bien que je puisse encore le peaufienr) début septembre (2026). Je suis satisfait du résultat, tant dans la structure du projet que dans les performances du programme.
+        J'ai pour projet d'intégrer ce programme dans un futur projet de webapp, avec pour but de créer une application de timer pour rubik's cube. J'ai donc besoin pour cela de pouvoir générer des mélanges.
+        Je réfléchis encore à comment je peux utiliser un programme en C++ dans une webapp (html, css, javascript), et je compte me renseigner sur les possibilités.`,
+        links: [{name: "repository", link:"https://gitlab.com/echetiago/twophasesolvercpp"}]
     }
 ]
